@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequence Memorizer Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sequence Memorizer Game</h1>
+        
+        <!-- Start Form -->
+        <div id="startForm" class="start-form">
+            <div class="form-group">
+                <label for="playerName">Enter your name:</label>
+                <input type="text" id="playerName" placeholder="Your name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="entityCount">Select number of entities:</label>
+                <select id="entityCount" required>
+                    <option value="">Choose...</option>
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            
+            <button id="startBtn" class="start-btn">Start Game</button>
+        </div>
+        
+        <!-- Game Area -->
+        <div id="gameArea" class="game-area" style="display: none;">
+            <div class="game-info">
+                <h2>Welcome, <span id="playerNameDisplay"></span>!</h2>
+                <p>Round: <span id="roundNumber">1</span></p>
+                <p>Sequence Length: <span id="sequenceLength">3</span></p>
+                <p>Score: <span id="score">0</span></p>
+            </div>
+            
+            <!-- Sequence Array Bar -->
+            <div class="sequence-bar">
+                <h3>Current Sequence:</h3>
+                <div id="sequenceArray" class="sequence-array">
+                    <!-- Sequence boxes will be generated here -->
+                </div>
+            </div>
+            
+            <div class="cards-container" id="cardsContainer">
+                <!-- Cards will be generated here -->
+            </div>
+            
+            <div class="game-controls">
+                <button id="startSequenceBtn" class="control-btn">Start Sequence</button>
+                <button id="homeBtn" class="control-btn home-btn">Home</button>
+            </div>
+            
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
